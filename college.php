@@ -31,8 +31,8 @@
         
         <div class="form-row">
           <div class="form-group col-md-4">
-            <label>Cutoff Rank</label>
-            <input type="text" class="form-control" name="Cutoff_rank" placeholder="Cutoff Rank">
+            <label>College Rank</label>
+            <input type="number" class="form-control" name="College_rank" placeholder="College Rank">
           </div>
           <div class="form-group col-md-4">
             <label>College City</label>
