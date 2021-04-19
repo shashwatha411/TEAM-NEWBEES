@@ -1,4 +1,5 @@
-# TEAM-NEWBEES
-AMOC 2021
-shashwatha priyanka jaina
-test 123
+# TEAM-NEWBEES :bee:
+**AMOC 2021**
+**COLLEGE ADMISSION PREDICTOR**
+
+A website with a database with college admission criterias and previous cut off marks, that helps students predict which colleges are most likely to accept their admission applications. 

@@ -1,0 +1,39 @@
+/*  NAVBAR  */
+.navbar-nav a{
+    color: white;
+    font-weight: bolder;
+    font-size: large;
+}
+/*  BODY    */
+body{
+    background-color: rgb(187, 207, 207);
+}
+/*  SIGN-IN BOX*/
+.container.adminsign-in{
+    margin-top: 5%;
+    max-width: 60%;
+}
+.card.admin-card{
+    border-radius: 10%;
+    padding:40px 0px 20px;
+    box-shadow:10px 10px 20px rgba(0,0,0,0.5);
+    /*  chrome and safari compatible*/
+    -webkit-box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
+    /*  moxilla compatible  */
+    -moz-box-shadow:10px 10px 20px rgba(224, 134, 134, 0.5);
+}
+img.admin-logo{
+    padding:0 2rem 2rem;
+    margin:auto;
+    display:block;
+    min-width:100px;    
+    max-width:40%;
+}
+form.admin-form{
+    max-width:400px;
+    margin:auto;
+}
+/*button.admin-button{
+    
+    margin:auto;
+}*/
