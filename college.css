@@ -1,0 +1,21 @@
+h1{
+    padding:20px;
+    border:0;
+    color: white;
+    text-align: center;
+    background-color:rgb(101, 95, 153);
+    margin-bottom: 0%;
+}
+.myform{
+    margin:20px;
+    padding:20px;
+    font-weight: bold;
+}
+.mybtn{
+    background-color:rgb(101, 95, 153);
+    border-color: rgb(101, 95, 153);
+    margin:15px auto auto auto;
+    padding:10px;
+    display:block;
+    width:25%;
+}
