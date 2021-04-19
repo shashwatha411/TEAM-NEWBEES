@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="bootstrap-grid.min.css" >
     <link rel="stylesheet" href="bootstrap.min.css" >
     <!--OWN CSS-->
-    <link rel="stylesheet" href="index.css">
-    <title>Newbees-The Admission Predictor</title>
+    <link rel="stylesheet" href="login.css">
+    <title>Student Login</title>
     <link rel = "icon" href = "logo.png" type = "image/x-icon">
   </head>
-  <body>
+  <body >
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="box-shadow: 5px 10px 8px #1f1d1d;">
         <a class="navbar-brand" href="index.html">
           <img src="logo.png" width="30" height="30" alt="logo">
@@ -30,20 +30,35 @@
             <li class="nav-item">
               <a class="nav-link" href="studentlogin.html">User</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
+                      
           </ul>
         </div>
       </nav>
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container text">
-          <h1 class="display-4">College Admission Predictor</h1>
-          <p class="lead">Your Future.Your Choice.Our Path</p>
-          <div id="graphic"><image src="logo.png" height="190px" width="190px" alt="logo"></image></div>
-        </div>
+      <div class="container adminsign-in">
+          <div class="row">
+              <div class="col"></div>
+              <div class="col-8">
+                <div class="card admin-card">
+                    <div class="card-body">
+                      <img src="logo.png" class="img-fluid admin-logo" alt="logo" >
+                      <form class="admin-form" method="POST">
+                        <div class="form-group">
+                          <label for="username">Student ID</label>
+                          <input type="text" class="form-control" id="student_id" aria-describedby="username" placeholder="Enter Student ID">
+                        </div>
+                        <div class="form-group">
+                          <label for="Password">Password</label>
+                          <input type="password" class="form-control" id="Password" placeholder="Password">
+                        </div>
+                        <p>Don't have an Account? <a href="studentsignup.html">SignUp Here</a></p>
+                        <button type="submit" name="submit" class="btn btn-primary btn-block admin-button">Submit</button>
+                      </form>
+                    </div>
+                  </div>
+              </div>
+              <div class="col"></div>
+          </div>
       </div>
-      
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

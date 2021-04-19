@@ -5,7 +5,9 @@
     font-size: large;
 }
 /*  BODY    */
-
+body{
+    background-color: rgb(187, 207, 207);
+}
 /*  SIGN-IN BOX*/
 .container.adminsign-in{
     margin-top: 5%;
