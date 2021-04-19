@@ -1,0 +1,18 @@
+h1{
+    padding:20px;
+    border:0;
+    color: white;
+    text-align: center;
+    background-color:rgb(101, 95, 153);
+    margin-bottom: 0%;
+}
+.options{
+    margin:20px 20% 20px 20%;
+}
+.options a{
+    margin:40px;
+    padding:15px;
+    font-weight: bolder;
+    background-color: rgb(101, 95, 153);
+    border-color: rgb(101, 95, 153);
+}

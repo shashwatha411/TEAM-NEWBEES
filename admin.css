@@ -5,11 +5,7 @@
     font-size: large;
 }
 /*  BODY    */
-body{
-    background-image:url(back3.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+
 /*  SIGN-IN BOX*/
 .container.adminsign-in{
     margin-top: 5%;
@@ -28,7 +24,8 @@ img.admin-logo{
     padding:0 2rem 2rem;
     margin:auto;
     display:block;
-    width:40%;    
+    min-width:100px;    
+    max-width:40%;
 }
 form.admin-form{
     max-width:400px;
