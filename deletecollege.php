@@ -1,3 +1,6 @@
+<?php
+    
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -7,23 +10,22 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="adminhome.css">
-    <title>Admin</title>
+    <link rel="stylesheet" href="college.css">
+    <title>Delete College</title>
     <link rel = "icon" href = "logo.png" type = "image/x-icon">
   </head>
   <body>
-    <h1>Welcome, Admin!</h1>
-    <div class="options">
-        <a class="btn btn-primary" href="college.php" role="button">Insert A College</a>
-        <a class="btn btn-primary" href="cutoff.php" role="button">Insert A Cutoff</a>
-        <a class="btn btn-primary" href="student.php" role="button">Insert Student Record</a>
-        <a class="btn btn-primary" href="#" role="button">Modify A College</a>
-        <a class="btn btn-primary" href="#" role="button">Modify A Cutoff</a>
-        <a class="btn btn-primary" href="#" role="button">Modify Student Record</a>
-        <a class="btn btn-primary" href="deletecollege.php" role="button">Delete A College</a>
-        <a class="btn btn-primary" href="deletecutoff.php" role="button">Delete A Cutoff</a>
-        <a class="btn btn-primary" href="deletestudent.php" role="button">Delete Student Record</a>
-        <a class="btn btn-primary" href="#" role="button">Show all Tables</a>
+    <h1>Enter the necessary Details</h1>
+    <div class="myform">
+    <form name="college_del" method="POST" action="">
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <label>College ID</label>
+            <input type="text" class="form-control" id="College_id" name="College_id"placeholder="Enter the College ID of the record to be deleted" required>
+          </div>
+        </div>
+        <button type="submit" name="submit" class="btn btn-primary mybtn">SUBMIT</button>
+      </form>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
