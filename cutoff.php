@@ -1,3 +1,36 @@
+<?php
+/* Attempt MySQL server connection.*/
+$conn = mysqli_connect("localhost", "root", "", "cap");
+ 
+// Check connection
+if($conn === false)
+{
+    die("ERROR: Could not connect. " . mysqli_connect_error());
+}
+ if(isset($_POST['submit']))
+ {
+// Escape user inputs for security
+$College_id =  $_POST['College_id'];
+$Course_name = $_POST['Course_name'];
+$Cutoff_year =$_POST['Cutoff_year'];
+$Cutoff_rank = $_POST['Cutoff_rank'];
+$College_fees =  $_POST['College_fees'];
+ 
+// Attempt insert query execution
+$sql = "INSERT INTO `cutoff`(`C_ID`, `course`, `year`, `cutoff`, `fees`) VALUES ('$College_id','$Course_name','$Cutoff_year','$Cutoff_rank','$College_fees')";
+if(mysqli_query($conn, $sql))
+{
+  echo '<script type="text/javascript"> alert("Record successfully inserted") </script>';
+} 
+else
+{
+  echo '<script type="text/javascript"> alert("Could not insert! Try again!") </script>'; 
+}
+ 
+// Close connection
+mysqli_close($conn);
+}
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -14,11 +47,11 @@
   <body>
     <h1>Enter the necessary Details</h1>
     <div class="myform">
-    <form name="cutoff_add" method="POST">
+    <form name="cutoff_add" method="POST" action="">
         <div class="form-row">
           <div class="form-group col-md-6">
             <label>College ID</label>
-            <input type="text" class="form-control" id="College_id" name="College_id" placeholder="College ID" required>
+            <input type="number" class="form-control" id="College_id" name="College_id" placeholder="College ID" required>
           </div>
           <div class="form-group col-md-6">
             <label>Course Name</label>
@@ -26,6 +59,7 @@
               <option value="Computer S">Computer Science & Engineering</option>
               <option value="Civil">Civil Engineering</option>
               <option value="Chemical">Chemical Engineering</option>
+              <option value="ECE">Electronics and Communication Engineering</option>
             </select>
           </div>       
         </div>
@@ -44,13 +78,22 @@
           </div>
           <div class="form-group col-md-4">
             <label>College Fees</label>
-            <input type="text" class="form-control" name="College_fees" placeholder="Fees">
+            <input type="number" class="form-control" name="College_fees" placeholder="Fees">
           </div>
         </div>
         
-        <button type="submit" name="submit" class="btn btn-primary mybtn">SUBMIT</button>
+        <button type="submit" name="submit" class="btn btn-primary mybtn" onclick="myfunc()">SUBMIT</button>
       </form>
     </div>
+    <script>
+        function myfunc() {
+            var x = document.forms["cutoff_add"]["College_id"].value;
+            if (x == "") {
+                alert("College ID must be filled out");
+                return false;
+            }
+            }
+    </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

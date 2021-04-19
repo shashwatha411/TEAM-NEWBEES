@@ -1,3 +1,38 @@
+<?php
+/* Attempt MySQL server connection.*/
+$conn = mysqli_connect("localhost", "root", "", "cap");
+ 
+// Check connection
+if($conn === false)
+{
+    die("ERROR: Could not connect. " . mysqli_connect_error());
+}
+ if(isset($_POST['submit']))
+ {
+// Escape user inputs for security
+$Student_id =  $_POST['Student_id'];
+$Student_name = $_POST['Student_name'];
+$Student_rank =$_POST['Student_rank'];
+$Student_age = $_POST['Student_age'];
+$Student_email =  $_POST['Student_email'];
+$Student_phone = $_POST['Student_phone'];
+$Student_pass = $_POST['Student_pass'];
+ 
+// Attempt insert query execution
+$sql = "INSERT INTO `student`(`S_ID`, `S_name`, `S_marks`, `S_age`, `S_email`, `S_phone`, `S_pass`) VALUES ('$Student_id','$Student_name','$Student_rank','$Student_age','$Student_email','$Student_phone','$Student_pass')";
+if(mysqli_query($conn, $sql))
+{
+  echo '<script type="text/javascript"> alert("Record successfully inserted") </script>';
+} 
+else
+{
+  echo '<script type="text/javascript"> alert("Could not insert! Try again!") </script>'; 
+}
+ 
+// Close connection
+mysqli_close($conn);
+}
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -18,7 +53,7 @@
         <div class="form-row">
           <div class="form-group col-md-6">
             <label>Student ID</label>
-            <input type="text" class="form-control" id="Student_id" name="Student_id"placeholder="Student ID" required>
+            <input type="number" class="form-control" id="Student_id" name="Student_id"placeholder="Student ID" required>
           </div>
           <div class="form-group col-md-6">
             <label>Student Name</label>
@@ -42,13 +77,28 @@
           </div>
           <div class="form-group col-md-6">
             <label>Phone Number</label>
-            <input type="text" class="form-control" name="Student_phone" placeholder="Phone Number">
+            <input type="number" class="form-control" name="Student_phone" placeholder="Phone Number">
           </div>
         </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label>Student Password</label>
+            <input type="text" class="form-control" id="Student_pass" name="Student_pass" placeholder="Login Password">
+          </div> 
+        </div>
         
-        <button type="submit" name="submit" class="btn btn-primary mybtn">SUBMIT</button>
+        <button type="submit" name="submit" onclick="myfunc()" class="btn btn-primary mybtn">SUBMIT</button>
       </form>
     </div>
+    <script>
+        function myfunc() {
+            var x = document.forms["student_add"]["Student_id"].value;
+            if (x == "") {
+                alert("College ID must be filled out");
+                return false;
+            }
+            }
+    </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
