@@ -14,7 +14,7 @@
   <body>
     <h1>Enter the necessary Details</h1>
     <div class="myform">
-    <form name="cutoff_add" method="POST">
+    <form name="student_add" method="POST">
         <div class="form-row">
           <div class="form-group col-md-6">
             <label>Student ID</label>

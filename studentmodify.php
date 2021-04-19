@@ -10,15 +10,15 @@ if($conn === false)
 if(isset($_POST['submit']))
  {
   // Escape user inputs for security
-  $college_id =  $_POST['college_id'];
+  $student_id =  $_POST['student_id'];
   $attr = $_POST['attr'];
   $new_val = $_POST['new_val'];
           
  // Attempt insert query execution
-$sql = "UPDATE `college` SET $attr = '$new_val' WHERE C_ID = '$college_id'";
+$sql = "UPDATE `student` SET $attr = '$new_val' WHERE S_ID = '$student_id'";
 if( mysqli_query($conn, $sql))
 {
-  echo '<script type="text/javascript"> alert("Record successfully modified") </script>';
+  echo '<script type="text/javascript"> alert("Record successfully modifed") </script>';
 } 
 else{
   echo '<script type="text/javascript"> alert("Could not insert! Try again!") </script>'; 
@@ -37,34 +37,38 @@ mysqli_close($conn);
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="college.css">
-    <title>College Modify</title>
+    <title>Student Modify</title>
     <link rel = "icon" href = "logo.png" type = "image/x-icon">
   </head>
   <body>
     <h1>Enter the necessary Details</h1>
     <div class="myform">
-    <form name="college_modify" method="POST" action="">
+    <form name="student_modify" method="POST" action="">
         <div class="form-row">
           <div class="form-group col-md-6">
-            <label>College ID</label>
-            <input type="text" class="form-control" id="College_id" name="college_id"placeholder="College ID" required>
+            <label>Student ID</label>
+            <input type="text" class="form-control" id="student_id" name="student_id"placeholder="Student ID" required>
           </div>
           <div class="form-group col-md-6">
             <label>Attribute to be modified</label>
             <select name="attr" class="form-control">
-              <option value ="C_name">College Name</option>
-              <option value ="C_rank">College Rank</option>
-              <option value ="C_city">College City</option>
-              <option value ="C_contact">College Contact</option>
+              <option value ="S_name">Student Name</option>
+              <option value ="S_marks">Marks</option>
+              <option value ="S_age">Student Age</option>
+              <option value ="S_email">Student Email</option>
+              <option value ="S_phone">Phone NUmber</option>
             </select>
           </div>
         </div>
         <div class="form-row">
-            <div class="form-group col-md-12">
-                <label>Enter the New Value</label>
-                <input type="text" class="form-control" name="new_val" placeholder="New Value" required>
-              </div>
+          
+          <div class="form-group col-md-6">
+            <label>Enter the New Value</label>
+            <input type="text" class="form-control" name="new_val" placeholder="New Value" required>
+          </div>
         </div>
+           
+       
         <button type="submit" name="submit" class="btn btn-primary mybtn">SUBMIT</button>
     </form>
     </div>

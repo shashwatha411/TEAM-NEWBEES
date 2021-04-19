@@ -18,7 +18,7 @@
         <div class="form-row">
           <div class="form-group col-md-6">
             <label>College ID</label>
-            <input type="text" class="form-control" id="College_id" name="College_id"placeholder="College ID" required>
+            <input type="text" class="form-control" id="College_id" name="College_id" placeholder="College ID" required>
           </div>
           <div class="form-group col-md-6">
             <label>Course Name</label>
