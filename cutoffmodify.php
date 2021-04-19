@@ -56,6 +56,7 @@ mysqli_close($conn);
               <option value="Computer S">Computer Science & Engineering</option>
               <option value="Civil">Civil Engineering</option>
               <option value="Chemical">Chemical Engineering</option>
+              <option value="ECE">Electronics & Communication Engineering</option>
             </select>
           </div> 
         </div>
