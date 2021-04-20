@@ -17,6 +17,6 @@ A website with a database with college admission criterias and previous cut off 
 **Libraries Used**
  * Bootstrap
  * JQuery
- * AJAX
+ * AJAX <br>
 **Server & Database**
  * Apache & MySql
