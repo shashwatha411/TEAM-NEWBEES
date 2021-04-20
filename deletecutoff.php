@@ -21,9 +21,10 @@ if (isset($_POST['submit'])) {
   $result = mysqli_query($connect, $query);
 
   if ($result) {
-    echo 'Data Deleted';
-  } else {
-    echo 'Data Not Deleted';
+    echo '<script type="text/javascript"> alert("Record successfully Deleted!") </script>';
+  } 
+  else{
+    echo '<script type="text/javascript"> alert("Could not delete! Try again!") </script>'; 
   }
   mysqli_close($connect);
 }

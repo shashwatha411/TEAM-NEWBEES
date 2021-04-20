@@ -21,7 +21,7 @@ if( mysqli_query($conn, $sql))
   echo '<script type="text/javascript"> alert("Record successfully modifed") </script>';
 } 
 else{
-  echo '<script type="text/javascript"> alert("Could not insert! Try again!") </script>'; 
+  echo '<script type="text/javascript"> alert("Could not modify! Try again!") </script>'; 
 }
 // Close connection
 mysqli_close($conn);
