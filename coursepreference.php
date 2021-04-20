@@ -55,8 +55,7 @@
               {
               $course = $_POST['Course_name'];
               $rank = $_POST['rank'];
-              $sq = "SELECT C_ID FROM cutoff WHERE course='$course' AND cutoff <= '$rank' ";
-              $sql = "SELECT * FROM college WHERE C_ID IN '$sq'";
+              $sql = "SELECT DISTINCT a.C_ID, a.C_name,a.C_rank, a.C_contact FROM college a,cutoff b WHERE b.course='$course' AND b.cutoff > '$rank' ";
               $res = $conn->query($sql);
 
               if($res->num_rows >0){
