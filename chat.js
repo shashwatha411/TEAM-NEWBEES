@@ -35,7 +35,7 @@ function getTime() {
 
 // display the first message
 function firstBotMessage() {
-    let firstMessage = "Hello,what can i help you with?<br> Enter the one of the following commands:<br>1.Show colleges based on rank<br>2.Show colleges based on area<br>3.Show colleges based on course<br>4.Contact Admin<br>5.Log Out";
+    let firstMessage = "Hello,what can i help you with?<br> Enter the one of the following commands(1-5):<br>1.Show colleges based on rank<br>2.Show colleges based on area<br>3.Show colleges based on course<br>4.Contact Admin";
     document.getElementById("botStarterMessage").innerHTML = '<p class="botText"><span>' + firstMessage + '</span></p>';
     let time = getTime();
 

@@ -1,14 +1,12 @@
 function getBotResponse(input) {
-    if (input == "Show colleges based on rank")
+    if (input == "1")
         return "Click on nav bar";
-    else if (input == "Show colleges based on area")
+    else if (input == "2")
         return "Click on nav bar";
-    else if (input == "Show colleges based on course")
+    else if (input == "3")
         return "Click on nav bar";
-    else if (input == "Contact Admin")
+    else if (input == "4")
         return "Click on nav bar";
-    else if (input == "Log Out")
-        return "Click on the bee icon on the top left corner";
     else
         return "Try again. Type the exact command again. ";
 }
