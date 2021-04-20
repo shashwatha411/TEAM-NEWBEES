@@ -15,6 +15,9 @@
     <div class="list">
     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
         <li class="nav-item">
+        <a  href="adminhome.html"><img src="logo.png" width="50" height="40" alt="logo"></a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="false">College</a>
         </li>
         <li class="nav-item">
@@ -22,6 +25,9 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Student</a>
+        </li>
+        <li class="nav-item">
+          <a href="index.html" onclick="alert('Successfully Logged out!')"class="btn btn-md btn-primary active" style="font-weight:bolder;"role="button" aria-pressed="true">Log Out</a>
         </li>
       </ul>
     </div>
