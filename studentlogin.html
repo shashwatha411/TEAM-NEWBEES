@@ -41,16 +41,16 @@
                 <div class="card admin-card">
                     <div class="card-body">
                       <img src="logo.png" class="img-fluid admin-logo" alt="logo" >
-                      <form class="admin-form" method="POST">
+                      <form class="admin-form" method="POST" action="studentlogin.php">
                         <div class="form-group">
                           <label for="username">Student ID</label>
-                          <input type="text" class="form-control" id="student_id" aria-describedby="username" placeholder="Enter Student ID">
+                          <input type="number" class="form-control" name="student_id" aria-describedby="username" placeholder="Enter Student ID">
                         </div>
                         <div class="form-group">
                           <label for="Password">Password</label>
-                          <input type="password" class="form-control" id="Password" placeholder="Password">
+                          <input type="password" class="form-control" name="student_pass" placeholder="Enter Password">
                         </div>
-                        <p>Don't have an Account? <a href="studentsignup.html">SignUp Here</a></p>
+                        <p>Don't have an Account? <a href="studentsignup.php">SignUp Here</a></p>
                         <button type="submit" name="submit" class="btn btn-primary btn-block admin-button">Submit</button>
                       </form>
                     </div>
