@@ -9,10 +9,10 @@ A website with a database with college admission criterias and previous cut off 
 
 # TECH-STACK COMPONENTS
 **Languages Used**
- * Bullet List HTML
-CSS
-Javascript
-PHP
+ *  HTML
+ * CSS
+ * Javascript
+ * PHP
 **Libraries Used**
 Bootstrap
 JQuery
