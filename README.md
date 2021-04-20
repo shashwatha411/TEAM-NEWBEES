@@ -9,7 +9,7 @@ A website with a database with college admission criterias and previous cut off 
 
 # Tech-Stack Components:
 **Languages Used**
- *  HTML
+ * HTML
  * CSS
  * Javascript
  * PHP <br>
@@ -18,5 +18,6 @@ A website with a database with college admission criterias and previous cut off 
  * Bootstrap
  * JQuery
  * AJAX <br>
+ 
 **Server & Database**
  * Apache & MySql
