@@ -56,7 +56,8 @@ mysqli_close($conn);
               <option value ="S_marks">Marks</option>
               <option value ="S_age">Student Age</option>
               <option value ="S_email">Student Email</option>
-              <option value ="S_phone">Phone NUmber</option>
+              <option value ="S_phone">Phone Number</option>
+              <option value ="S_pass">Student Password</option>
             </select>
           </div>
         </div>
