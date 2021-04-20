@@ -21,7 +21,7 @@
         <li><a onclick="alert('Successfully Logged out!')"href="index.html">Logout</a></li>
     </ul>
     
-      <div style="margin-left:25%;padding:50px 30px;height:1000px;" class="custcontent">
+      <div style="margin-left:26%;padding:50px 30px;height:1000px;" class="custcontent">
         <form method="POST" action="">
             <label>Course Name</label>
             <select name="Course_name" class="form-control">

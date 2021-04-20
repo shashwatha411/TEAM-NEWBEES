@@ -46,7 +46,17 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
-  <h1>Enter the necessary Details</h1>
+    <h1>
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <a  href="adminhome.html"><img src="logo.png" width="50" height="40" alt="logo"></a>
+        </div>
+        <div class="form-group col-md-8">Enter the necessary Details </div>
+        <div class="form-group col-md-2">
+          <a href="index.html" onclick="alert('Successfully Logged out!')"class="btn btn-lg active" style="background-color:rgb(147, 142, 199);color:rgb(255, 255, 255);font-weight:bolder;"role="button" aria-pressed="true">Log Out</a>
+        </div>
+      </div>
+    </h1>
   <div class="myform">
     <form name="cutoff_del" method="POST" action="">
       <div class="form-row">
@@ -60,6 +70,7 @@ if (isset($_POST['submit'])) {
             <option value="Computer S">Computer Science & Engineering</option>
             <option value="Civil">Civil Engineering</option>
             <option value="Chemical">Chemical Engineering</option>
+            <option value="ECE">Electronics & Communication Engineering</option>
           </select>
         </div>
       </div>
