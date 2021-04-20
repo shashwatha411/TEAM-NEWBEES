@@ -7,15 +7,15 @@ A website with a database with college admission criterias and previous cut off 
 # Website Flow:
 
 
-# TECH-STACK COMPONENTS
+# Tech-Stack Components
 **Languages Used**
  *  HTML
  * CSS
  * Javascript
  * PHP
 **Libraries Used**
-Bootstrap
-JQuery
-AJAX
+ * Bootstrap
+ * JQuery
+ * AJAX
 **Server & Database**
-Apache & MySql
+ * Apache & MySql
