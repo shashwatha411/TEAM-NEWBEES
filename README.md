@@ -12,7 +12,7 @@ A website with a database with college admission criterias and previous cut off 
  *  HTML
  * CSS
  * Javascript
- * PHP
+ * PHP <br />
 **Libraries Used**
  * Bootstrap
  * JQuery
