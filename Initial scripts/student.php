@@ -10,14 +10,16 @@ if($conn === false)
  if(isset($_POST['submit']))
  {
 // Escape user inputs for security
-$College_id =  $_POST['College_id'];
-$College_name = $_POST['College_name'];
-$College_rank =$_POST['College_rank'];
-$College_city = $_POST['College_city'];
-$College_contact =  $_POST['College_contact'];
+$Student_id =  $_POST['Student_id'];
+$Student_name = $_POST['Student_name'];
+$Student_rank =$_POST['Student_rank'];
+$Student_age = $_POST['Student_age'];
+$Student_email =  $_POST['Student_email'];
+$Student_phone = $_POST['Student_phone'];
+$Student_pass = $_POST['Student_pass'];
  
 // Attempt insert query execution
-$sql = "INSERT INTO `college`(`C_ID`, `C_name`, `C_rank`, `C_city`, `C_contact`) VALUES ('$College_id','$College_name','$College_rank','$College_city','$College_contact')";
+$sql = "INSERT INTO `student`(`S_ID`, `S_name`, `S_marks`, `S_age`, `S_email`, `S_phone`, `S_pass`) VALUES ('$Student_id','$Student_name','$Student_rank','$Student_age','$Student_email','$Student_phone','$Student_pass')";
 if(mysqli_query($conn, $sql))
 {
   echo '<script type="text/javascript"> alert("Record successfully inserted") </script>';
@@ -40,15 +42,15 @@ mysqli_close($conn);
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="college.css">
-    <title>Add College</title>
-    <link rel = "icon" href = "logo.png" type = "image/x-icon">
+    <link rel="stylesheet" href="css/college.css">
+    <title>Add Student</title>
+    <link rel = "icon" href = "Images/logo.png" type = "image/x-icon">
   </head>
   <body>
     <h1>
       <div class="form-row">
         <div class="form-group col-md-2">
-          <a  href="adminhome.html"><img src="logo.png" width="50" height="40" alt="logo"></a>
+          <a  href="adminhome.html"><img src="Images/logo.png" width="50" height="40" alt="logo"></a>
         </div>
         <div class="form-group col-md-8">Enter the necessary Details </div>
         <div class="form-group col-md-2">
@@ -57,39 +59,50 @@ mysqli_close($conn);
       </div>
     </h1>
     <div class="myform">
-    <form name="college_add" method="POST" action="">
+    <form name="student_add" method="POST">
         <div class="form-row">
           <div class="form-group col-md-6">
-            <label>College ID</label>
-            <input type="number" class="form-control" id="College_id" name="College_id" placeholder="College ID" required>
+            <label>Student ID</label>
+            <input type="number" class="form-control" id="Student_id" name="Student_id"placeholder="Student ID" required>
           </div>
           <div class="form-group col-md-6">
-            <label >College Name</label>
-            <input type="text" class="form-control" id="College_name" name="College_name" placeholder="College Name">
-          </div>
+            <label>Student Name</label>
+            <input type="text" class="form-control" id="Student_name" name="Student_name"placeholder="Name">
+          </div>                
         </div>
-        
         <div class="form-row">
-          <div class="form-group col-md-4">
-            <label>College Rank</label>
-            <input type="number" class="form-control" id="College_rank" name="College_rank" placeholder="College Rank">
+          <div class="form-group col-md-6">
+            <label>Student Rank</label>
+            <input type="number" class="form-control" name="Student_rank" placeholder="Rank">
           </div>
-          <div class="form-group col-md-4">
-            <label>College City</label>
-            <input type="text" class="form-control" id="College_city" name="College_city" placeholder="City">
-          </div>
-          <div class="form-group col-md-4">
-            <label>College Contact Number</label>
-            <input type="number" class="form-control" id="College_contact" name="College_contact" placeholder="Contact Number">
+          <div class="form-group col-md-6">
+            <label>Student Age</label>
+            <input type="number" class="form-control" name="Student_age" placeholder="Age">
           </div>
         </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label>Email</label>
+            <input type="email" class="form-control" name="Student_email" placeholder="Email Address i.e xxx@gmail.com">
+          </div>
+          <div class="form-group col-md-6">
+            <label>Phone Number</label>
+            <input type="number" class="form-control" name="Student_phone" placeholder="Phone Number">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label>Student Password</label>
+            <input type="text" class="form-control" id="Student_pass" name="Student_pass" placeholder="Login Password">
+          </div> 
+        </div>
         
-        <button type="submit" name="submit" class="btn btn-primary mybtn" onclick="myfunc()">SUBMIT</button>
+        <button type="submit" name="submit" onclick="myfunc()" class="btn btn-primary mybtn">SUBMIT</button>
       </form>
     </div>
     <script>
         function myfunc() {
-            var x = document.forms["college_add"]["College_id"].value;
+            var x = document.forms["student_add"]["Student_id"].value;
             if (x == "") {
                 alert("College ID must be filled out");
                 return false;

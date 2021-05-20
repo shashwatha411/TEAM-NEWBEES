@@ -36,15 +36,15 @@ mysqli_close($conn);
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="college.css">
+    <link rel="stylesheet" href="css/college.css">
     <title>Student Modify</title>
-    <link rel = "icon" href = "logo.png" type = "image/x-icon">
+    <link rel = "icon" href = "Images/logo.png" type = "image/x-icon">
   </head>
   <body>
     <h1>
       <div class="form-row">
         <div class="form-group col-md-2">
-          <a  href="adminhome.html"><img src="logo.png" width="50" height="40" alt="logo"></a>
+          <a  href="adminhome.html"><img src="Images/logo.png" width="50" height="40" alt="logo"></a>
         </div>
         <div class="form-group col-md-8">Enter the necessary Details </div>
         <div class="form-group col-md-2">

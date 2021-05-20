@@ -7,15 +7,15 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="showtable.css">
+    <link rel="stylesheet" href="css/showtable.css">
     <title>Show Tables</title>
-    <link rel = "icon" href = "logo.png" type = "image/x-icon">
+    <link rel = "icon" href = "Images/logo.png" type = "image/x-icon">
   </head>
   <body>
     <div class="list">
     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
         <li class="nav-item">
-        <a  href="adminhome.html"><img src="logo.png" width="50" height="40" alt="logo"></a>
+        <a  href="adminhome.html"><img src="Images/logo.png" width="50" height="40" alt="logo"></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="false">College</a>

@@ -11,13 +11,13 @@ if($conn === false)
  {
 // Escape user inputs for security
 $College_id =  $_POST['College_id'];
-$Course_name = $_POST['Course_name'];
-$Cutoff_year =$_POST['Cutoff_year'];
-$Cutoff_rank = $_POST['Cutoff_rank'];
-$College_fees =  $_POST['College_fees'];
+$College_name = $_POST['College_name'];
+$College_rank =$_POST['College_rank'];
+$College_city = $_POST['College_city'];
+$College_contact =  $_POST['College_contact'];
  
 // Attempt insert query execution
-$sql = "INSERT INTO `cutoff`(`C_ID`, `course`, `year`, `cutoff`, `fees`) VALUES ('$College_id','$Course_name','$Cutoff_year','$Cutoff_rank','$College_fees')";
+$sql = "INSERT INTO `college`(`C_ID`, `C_name`, `C_rank`, `C_city`, `C_contact`) VALUES ('$College_id','$College_name','$College_rank','$College_city','$College_contact')";
 if(mysqli_query($conn, $sql))
 {
   echo '<script type="text/javascript"> alert("Record successfully inserted") </script>';
@@ -40,15 +40,15 @@ mysqli_close($conn);
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="college.css">
-    <title>Add Cutoff</title>
-    <link rel = "icon" href = "logo.png" type = "image/x-icon">
+    <link rel="stylesheet" href="css/college.css">
+    <title>Add College</title>
+    <link rel = "icon" href ="Images/logo.png" type = "image/x-icon">
   </head>
   <body>
-  <h1>
+    <h1>
       <div class="form-row">
         <div class="form-group col-md-2">
-          <a  href="adminhome.html"><img src="logo.png" width="50" height="40" alt="logo"></a>
+          <a  href="adminhome.html"><img src="Images/logo.png" width="50" height="40" alt="logo"></a>
         </div>
         <div class="form-group col-md-8">Enter the necessary Details </div>
         <div class="form-group col-md-2">
@@ -57,38 +57,30 @@ mysqli_close($conn);
       </div>
     </h1>
     <div class="myform">
-    <form name="cutoff_add" method="POST" action="">
+    <form name="college_add" method="POST" action="">
         <div class="form-row">
           <div class="form-group col-md-6">
             <label>College ID</label>
             <input type="number" class="form-control" id="College_id" name="College_id" placeholder="College ID" required>
           </div>
           <div class="form-group col-md-6">
-            <label>Course Name</label>
-            <select name="Course_name" class="form-control">
-              <option value="Computer S">Computer Science & Engineering</option>
-              <option value="Civil">Civil Engineering</option>
-              <option value="Chemical">Chemical Engineering</option>
-              <option value="ECE">Electronics and Communication Engineering</option>
-            </select>
-          </div>       
+            <label >College Name</label>
+            <input type="text" class="form-control" id="College_name" name="College_name" placeholder="College Name">
+          </div>
         </div>
         
         <div class="form-row">
           <div class="form-group col-md-4">
-            <label>Cutoff Rank</label>
-            <input type="number" class="form-control" name="Cutoff_rank" placeholder="Cutoff Rank">
+            <label>College Rank</label>
+            <input type="number" class="form-control" id="College_rank" name="College_rank" placeholder="College Rank">
           </div>
           <div class="form-group col-md-4">
-            <label>CutOff Year</label>
-            <select name="Cutoff_year" class="form-control">
-                <option value="2020">2020</option>
-                <option value="2019">2019</option>
-            </select>
+            <label>College City</label>
+            <input type="text" class="form-control" id="College_city" name="College_city" placeholder="City">
           </div>
           <div class="form-group col-md-4">
-            <label>College Fees</label>
-            <input type="number" class="form-control" name="College_fees" placeholder="Fees">
+            <label>College Contact Number</label>
+            <input type="number" class="form-control" id="College_contact" name="College_contact" placeholder="Contact Number">
           </div>
         </div>
         
@@ -97,7 +89,7 @@ mysqli_close($conn);
     </div>
     <script>
         function myfunc() {
-            var x = document.forms["cutoff_add"]["College_id"].value;
+            var x = document.forms["college_add"]["College_id"].value;
             if (x == "") {
                 alert("College ID must be filled out");
                 return false;

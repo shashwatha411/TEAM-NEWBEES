@@ -16,8 +16,7 @@ body{
 .jumbotron{
     text-align:center;
     height:550px;
-    background-image: url(back3.jpg);
-    background-repeat: no-repeat;
+    background-color:black;
     background-size: cover;
 }
 .text{

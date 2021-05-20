@@ -7,29 +7,32 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="studenthome.css">
+    <link rel="stylesheet" href="css/studenthome.css">
     <title>Student Home</title>
-    <link rel = "icon" href = "logo.png" type = "image/x-icon">
+    <link rel = "icon" href = "Images/logo.png" type = "image/x-icon">
   </head>
   <body>
     <ul>
         <li><a  href="customerhome.html">Home</a></li>
-        <li><a class="active" href="areapreference.html">Area Preference</a></li>
-        <li><a href="coursepreference.php">Course Preference</a></li>
+        <li><a  href="areapreference.php">Area Preference</a></li>
+        <li><a class="active"href="coursepreference.php">Course Preference</a></li>
         <li><a href="rankpreference.php">Rank Preference</a></li>
         <li><a href="contact.html">Contact Us</a></li>
         <li><a onclick="alert('Successfully Logged out!')"href="index.html">Logout</a></li>
     </ul>
     
-      <div style="margin-left:25%;padding:50px 30px;height:1000px;" class="custcontent">
+      <div style="margin-left:26%;padding:50px 30px;height:1000px;" class="custcontent">
         <form method="POST" action="">
-            <label>Enter Your Area Preference</label>
-            <select name="area_prefer" class="form-control form-control-lg">
-                <option>Choose Below</option>
-                <option value="NAGPUR"<?php echo (isset($_POST['area_prefer']) && $_POST['area_prefer'] === 'NAGPUR') ? 'selected' : ''; ?>>NAGPUR</option>
-                <option value="SURATHKAL">SURATHKAL</option>
-                <option value="ROURKELA">ROURKELA</option>
+            <label>Course Name</label>
+            <select name="Course_name" class="form-control">
+              <option value="Computer S">Computer Science & Engineering</option>
+              <option value="Civil">Civil Engineering</option>
+              <option value="Chemical">Chemical Engineering</option>
+              <option value="ECE">Electronics & Communication Engineering</option>
             </select>
+            <label>Enter Your Rank</label>
+            <input type="number" class="form-control" id="rank" name="rank" placeholder="Your Rank" required>
+                       
             <button type="submit" name="submit" class="btn btn-primary mybtn">SUBMIT</button>
         </form>
       <table class="table table-hover table-dark mytable">
@@ -50,8 +53,9 @@
               }
               if(isset($_POST['submit']))
               {
-              $preference = $_POST['area_prefer'];
-              $sql = "SELECT * FROM college WHERE C_city = '$preference' ";
+              $course = $_POST['Course_name'];
+              $rank = $_POST['rank'];
+              $sql = "SELECT DISTINCT a.C_ID, a.C_name,a.C_rank, a.C_contact FROM college a,cutoff b WHERE b.course='$course' AND b.cutoff > '$rank' ";
               $res = $conn->query($sql);
 
               if($res->num_rows >0){

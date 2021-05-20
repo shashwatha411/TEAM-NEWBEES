@@ -46,9 +46,9 @@ mysqli_close($conn);
     <link rel="stylesheet" href="bootstrap-grid.min.css" >
     <link rel="stylesheet" href="bootstrap.min.css" >
     <!--OWN CSS-->
-    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="css/signup.css">
     <title>Student SignUp</title>
-    <link rel = "icon" href = "logo.png" type = "image/x-icon">
+    <link rel = "icon" href = "Images/logo.png" type = "image/x-icon">
   </head>
   <body >
     <div class="container adminsign-in">
@@ -57,7 +57,7 @@ mysqli_close($conn);
               <div class="col-8">
                 <div class="card admin-card">
                     <div class="card-body">
-                      <img src="logo.png" class="img-fluid admin-logo" alt="logo" >
+                      <img src="Images/logo.png" class="img-fluid admin-logo" alt="logo" >
                       <form class="admin-form" method="POST">
                         <div class="form-row">
                             <div class="form-group col-md-6">
