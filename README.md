@@ -7,20 +7,20 @@ A website with a database with college admission criterias and previous cut off 
 - [Website Flow](#website-flow)
 - [Tech-Stack Components](#tech-stack-components)
 - [Run This Project](#run-this-project-on-your-local-machine)
+- [Authors](#authors)
 
 ## Website Flow:
 ![](AMOCWEBSITEFLOW.png)
 ```
-1. The Home page - This also dsiplays the chatbot feature.
+1. The Home page & Admin Page
+- This  dsiplays the chatbot feature.
+- Displays the management system built to perform the operations shown below 
 ```
-![image](https://user-images.githubusercontent.com/71128835/119167203-35218680-ba7d-11eb-8b69-e596aca43264.png)
-
+|Home Page        |Admin Page       |
+| --------------- | --------------- | 
+|![image](https://user-images.githubusercontent.com/71128835/119167203-35218680-ba7d-11eb-8b69-e596aca43264.png)|![image](https://user-images.githubusercontent.com/71128835/119166861-c5ab9700-ba7c-11eb-87eb-e5b581334cdd.png)|
 ```
-2. After Admin Log-in - showing the management system built to perform the operations shown 
-```
-![image](https://user-images.githubusercontent.com/71128835/119166861-c5ab9700-ba7c-11eb-87eb-e5b581334cdd.png)
-```
-3. After Student Log-in 
+2. After User Log-in 
 ```
 | Area Preference | Rank Preference | Course Preference |
 | --------------- | --------------- | ------------------|
