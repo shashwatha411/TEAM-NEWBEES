@@ -29,13 +29,16 @@ A website with a database with college admission criterias and previous cut off 
 
 ## Run This Project on your Local Machine
 ```
-Fork this Repository
+1.Fork this Repository
 ```
 ```
-Clone the repository into a folder on your machine
+2.Clone the repository into a folder on your machine
 ```
 ```
-Import the cap.sql file into a Mysql & Apache server to access the database
+3.Import the cap.sql file into a Mysql & Apache server to access the database
+```
+```
+4. Run the files starting with the index.html file
 ```
 ## Tech-Stack Components:
 **Languages Used**
