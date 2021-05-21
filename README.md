@@ -51,3 +51,7 @@ Import the cap.sql file into a Mysql & Apache server to access the database
  
 **Server & Database**
  * Apache & MySql
+## Authors:
+- [Shashwatha Karkera](https://github.com/shashwatha411)
+- [Jaina Vaishnav](https://github.com/JAINA2001)
+- [Priyanka Patel](https://github.com/priyanka2672)
