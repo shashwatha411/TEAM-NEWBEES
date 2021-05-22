@@ -33,6 +33,7 @@ A website with a database with college admission criterias and previous cut off 
 ```
 ```
 2.Clone the repository into a folder on your machine
+  git clone https://github.com/shashwatha411/TEAM-NEWBEES.git
 ```
 ```
 3.Import the cap.sql file into a Mysql & Apache server to access the database
